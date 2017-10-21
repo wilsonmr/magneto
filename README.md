@@ -45,6 +45,6 @@ System **states** can be recorded with `-states=filename`. The output is handled
     0,1,0
     1,0,1
 
-With `-record=main`, the different states are written directly under each other. **Example**: Computation is started with `magneto -TMin=2.5 -TSteps=1 -L=80 -measure=states -o=states`. To plot with matplotlib: `plt.imshow(np.loadtxt("states0.txt",  delimiter=","), cmap=plt.cm.Greys, interpolation ="none")`. Result:
+With `-record=main`, the different states are written directly under each other. **Example**: Computation is started with `magneto -TMin=2.5 -TSteps=1 -L=80 -measure=states -states=state`. To plot with matplotlib: `plt.imshow(np.loadtxt("state0.txt",  delimiter=","), cmap=plt.cm.Greys, interpolation ="none")`. Result:
 
 ![Example state](http://i.imgur.com/xXkFltH.png)
