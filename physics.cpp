@@ -10,6 +10,15 @@ double calc_E(std::vector<std::vector<int> > &grid) {
     return E/(L*L);
 }
 
+double calc_E_unnormalized(std::vector<std::vector<int> > &grid) {
+    unsigned int L = grid.size();
+    double E = 0.0;
+    for(int i = 0; i < L; ++i){
+        for (int j = 0; j < L; ++j)
+            E += -grid[i][j] * ( grid[i][(j+1)%L] + grid[(i+1)%L][j] );
+    }
+    return E;
+}
 
 int calc_dE(std::vector<std::vector<int> >& grid, int idx1, int idx2, const int L) {
     return 2 * grid[idx1][idx2] * (

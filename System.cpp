@@ -201,7 +201,7 @@ void System::compute() {
 void System::recordResults() {
     double tempResult;
     if (calc_e)
-        results[energy] += ", " + to_string(e_avg / cfg.n2);
+        results[energy] += ", " + to_string(e_val);
 
     if (calc_m)
         results[mag] += ", " + to_string(m_avg / cfg.n2);
@@ -256,6 +256,7 @@ void System::measure() {
     if (calc_e || calc_cv){
         double en = calc_E(grid);
         e_avg += en;
+	e_val = en;
         if(calc_cv)
             e2_avg += en*en;
     }
