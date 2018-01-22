@@ -31,7 +31,7 @@ private:
 	std::vector<double> exp_values;
 	bool calc_e=false, calc_m=false, calc_cv=false, calc_chi=false, calc_states=false, calc_corrfun=false;
 	grid_type grid;
-	double e_avg=0.0, e2_avg=0.0, m_avg=0.0, m2_avg=0.0;
+	double e_avg=0.0, e_val=0.0, e2_avg=0.0, m_avg=0.0, m2_avg=0.0;
 	std::vector<CorrelationPoint> correlations;
 	unsigned int corr_range, corr_count;
 	std::vector<int> access_i;

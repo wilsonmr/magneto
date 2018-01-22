@@ -255,8 +255,9 @@ void System::recordResults() {
 void System::measure() {
     if (calc_e || calc_cv){
         double en = calc_E(grid);
+	double en_u = calc_E_unnormalized(grid);
         e_avg += en;
-	e_val = en;
+	e_val = en_u;
         if(calc_cv)
             e2_avg += en*en;
     }
